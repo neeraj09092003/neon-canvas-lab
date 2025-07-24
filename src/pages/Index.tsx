@@ -1,13 +1,46 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { motion } from 'framer-motion';
+import Hero from '@/components/Hero';
+import About from '@/components/About';
+import Projects from '@/components/Projects';
+import Skills from '@/components/Skills';
+import Experience from '@/components/Experience';
+import Contact from '@/components/Contact';
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
-    </div>
+    <motion.div 
+      className="relative min-h-screen"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
+    >
+      {/* Hero Section */}
+      <Hero />
+      
+      {/* About Section */}
+      <About />
+      
+      {/* Projects Section */}
+      <Projects />
+      
+      {/* Skills Section */}
+      <Skills />
+      
+      {/* Experience Section */}
+      <Experience />
+      
+      {/* Contact Section */}
+      <Contact />
+      
+      {/* Footer */}
+      <footer className="py-8 px-4 border-t border-border/50">
+        <div className="max-w-7xl mx-auto text-center">
+          <p className="text-muted-foreground">
+            © 2024 Alex Cyber. Crafted with passion and lots of coffee ☕
+          </p>
+        </div>
+      </footer>
+    </motion.div>
   );
 };
 
