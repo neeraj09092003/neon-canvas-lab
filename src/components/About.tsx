@@ -39,7 +39,7 @@ const About = () => {
   };
 
   return (
-    <section ref={ref} className="py-20 px-4 relative">
+    <section id="about" ref={ref} className="py-20 px-4 relative">
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-20 left-10 w-32 h-32 bg-primary/5 rounded-full blur-2xl"></div>

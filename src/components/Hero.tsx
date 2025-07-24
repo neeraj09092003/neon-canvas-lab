@@ -62,11 +62,22 @@ const Hero = () => {
     }
   };
 
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  };
+
   const name = "ALEX CYBER";
   const title = "Frontend Wizard";
 
   return (
     <section 
+      id="hero"
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
       style={{
         backgroundImage: `url(${heroBackground})`,
@@ -164,6 +175,7 @@ const Hero = () => {
           className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"
         >
           <motion.button
+            onClick={() => scrollToSection('projects')}
             className="glass px-8 py-4 rounded-2xl text-foreground font-semibold border-primary/30 hover:border-primary/60 transition-all duration-300 glow-primary"
             whileHover={{ scale: 1.05, y: -2 }}
             whileTap={{ scale: 0.95 }}
@@ -172,6 +184,7 @@ const Hero = () => {
           </motion.button>
           
           <motion.button
+            onClick={() => scrollToSection('contact')}
             className="px-8 py-4 rounded-2xl bg-gradient-primary text-primary-foreground font-semibold shadow-neon hover:shadow-glow-primary transition-all duration-300"
             whileHover={{ scale: 1.05, y: -2 }}
             whileTap={{ scale: 0.95 }}

@@ -68,7 +68,7 @@ const Contact = () => {
   };
 
   return (
-    <section ref={ref} className="py-20 px-4 relative">
+    <section id="contact" ref={ref} className="py-20 px-4 relative">
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-32 left-20 w-56 h-56 bg-primary/5 rounded-full blur-3xl"></div>

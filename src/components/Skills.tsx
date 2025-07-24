@@ -94,7 +94,7 @@ const Skills = () => {
   };
 
   return (
-    <section ref={ref} className="py-20 px-4 relative">
+    <section id="skills" ref={ref} className="py-20 px-4 relative">
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-32 left-16 w-40 h-40 bg-primary/5 rounded-full blur-3xl"></div>
